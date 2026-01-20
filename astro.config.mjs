@@ -9,7 +9,7 @@ import { remarkReadingTime } from './src/lib/remark.mjs';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://xai4cv-workshop.github.io/',
-  base: '/xai4cv2026',
+  base: '/xai4cv2026/',
   markdown: {
     remarkPlugins: [remarkReadingTime],
     shikiConfig: {

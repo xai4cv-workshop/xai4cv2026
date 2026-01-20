@@ -1,0 +1,1 @@
+import astroConfig from 'astro.config.mjs';

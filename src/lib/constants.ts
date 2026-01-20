@@ -1,6 +1,4 @@
 import type { z } from 'astro/zod';
-import MetaDefaultImage from '@/assets/images/meta-default.jpg';
-import avatar from '@/assets/images/MA_2024_25.jpg';
 import type { seoSchemaWithoutImage } from '@/content.config';
 import astroConfig from 'astro.config.mjs';
 

@@ -23,23 +23,4 @@ type DefaultConfigurationType = {
 
 export const DEFAULT_CONFIGURATION: DefaultConfigurationType = {
   baseUrl: astroConfig.site || 'https://getcvfolio.com',
-  author: {
-    avatar,
-    name: 'Miguel-Ángel Fernández-Torres',
-    headline: 'Assistant Professor at Universidad Carlos III de Madrid',
-    username: 'miguelangelft',
-    location: 'Leganés, Madrid, Spain',
-    pronouns: 'He/Him',
-  },
-  seo: {
-    title: 'CV Folio — An Astro template inspired on Read.cv',
-    description:
-      'Clean and aesthetic portfolio website for developers and designers',
-    type: 'website',
-    image: MetaDefaultImage,
-    twitter: {
-      creator: '@cvfolio',
-    },
-    robots: 'noindex, nofollow',
-  },
 };

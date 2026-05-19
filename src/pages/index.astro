@@ -54,7 +54,7 @@ const base = import.meta.env.BASE_URL;
         <p>
           {/* <strong>Recording:</strong> <a href="https://www.youtube.com/watch?v=Y47yian9rnY" target="_blank">YouTube</a><br /> */}
           <strong>Date & Time:</strong> June 3rd, 2026, 8:00 AM - 1:00 PM (MDT local time)<br />
-          <strong>Location:</strong> 1AB, Colorado Convention Center, Denver, CO, USA
+          <strong>Location:</strong> Mile High 1AB, Colorado Convention Center, Denver, CO, USA
         </p>
       </section>
 
@@ -72,16 +72,24 @@ const base = import.meta.env.BASE_URL;
         <p>The schedule is in MDT local time.</p>
         <table class="xai-schedule-table">
           <tbody>
-            <tr><td>08:15–08:30</td><td>Opening</td></tr>
-            <tr><td>08:30–09:00</td><td>Invited Talk – Chaofan Chen</td></tr>
-            <tr><td>09:00–09:30</td><td>Invited Talk – Anh Totti Nguyen</td></tr>
-            <tr><td>09:30–10:00</td><td>Spotlight Session 1</td></tr>
-            <tr><td>10:00–10:30</td><td>Coffee Break</td></tr>
-            <tr><td>10:30–11:00</td><td>Invited Talk – Elizabeth Barnes</td></tr>
-            <tr><td>11:00–11:30</td><td>Spotlight Session 2</td></tr>
-            <tr><td>11:30–12:00</td><td>Tutorial – Maximilian Dreyer</td></tr>
-            <tr><td>12:00–12:15</td><td>Closing Remarks</td></tr>
-            <tr><td>12:15–13:00</td><td>Poster Session</td></tr>
+            <tr><td style="width: 150px;">08:15–08:30</td><td><strong>Opening</strong></td></tr>
+            <tr><td style="width: 150px;">08:30–09:00</td><td><strong>Invited Talk 1 – <a href="https://sites.google.com/view/chaofan-chen/home">Chaofan Chen</a></strong>
+              <p><strong>Learning by Comparison: Case-based Reasoning for Interpretable Vision Models.</strong> Deep neural networks have achieved remarkable success in computer vision, yet their decision-making processes often remain opaque. This lack of transparency often limits their use in high-stakes domains such as healthcare. In this talk, I will present a line of work focused on interpretable vision models that make predictions using case-based reasoning, by comparing inputs with learned prototypical examples. I will also highlight how these interpretable models could be used in real-world applications, such as medical imaging, to improve transparency and user trust in AI-assisted decision-making.</p>
+            </td></tr>
+            <tr><td style="width: 150px;">09:00–09:30</td><td><strong>Invited Talk 2 – <a href="https://anhnguyen.me/">Anh Totti Nguyen</a></strong>
+              <p><strong>Vision Language Models with Explainable Bottleneck Layers.</strong> By design, VLM is a challenging type of neural network to "explain" due to (1) the parallel processing of multi-head attention; (2) dual image-text input streams; (3) the lack of a natural interface to point users to where evidence is in the input image. Empirically, VLMs tend to be heavily biased towards the knowledge in the language model and sometimes ignoring the signals from the image itself. In this talk, I'd advocate for explaining VLMs by first defining a bottleneck layer where we want to 2-way exchange the explanatory information between the user and the neural network. Depending on where in the network we want to extract information and insert information back into the network (for ablation study or further processing), we want to build a different explainability component. First, I'll talk about the phenomenon that VLMs are often acting like a short-sighted person (VLMs are Blind) and heavily biased to the text data (VLMs are Biased). Then, I'll share distinct attempts of building an explainable bottleneck in various points in the VLM: the attention layer (Transformer Attention Bottleneck); pen-ultimate layer (PEEB); and output layer or VLMs (Highlighted Chain of Thoughts, PageGuide, SketchVLM). I'll share our most recent, exciting demos of how frontier VLMs (Gemini 3 Pro) can be turned into a VLM that annotates your input image or computer screen to guide users through local-computer or web tasks.</p>
+            </td></tr>
+            <tr><td style="width: 150px;">09:30–10:00</td><td><strong>Spotlight Session 1</strong></td></tr>
+            <tr><td style="width: 150px;">10:00–10:30</td><td><strong>Coffee Break</strong></td></tr>
+            <tr><td style="width: 150px;">10:30–11:00</td><td><strong>Invited Talk – <a href="https://sites.google.com/view/barnesgroup-csu/prof-barnes?authuser=0">Elizabeth Barnes</a></strong>
+              <p><strong>The Final Model Is Not Enough: Training Dynamics as a Form of XAI.</strong> AI weather and climate models now rival operational forecast systems, but interpreting these models remains a major challenge. Standard explainable AI methods, while effective for simpler climate prediction networks, have proven difficult to apply to large autoregressive emulators operating on high-dimensional spatiotemporal fields. In this talk, I argue that the training trajectory itself offers a complementary and underutilized diagnostic lens. Using AI weather emulators as a testbed, I show that models actively learn and then unlearn specific extreme weather events during training, that learning dynamics differ qualitatively across forecast tasks, and that designed perturbation experiments can pinpoint when models acquire knowledge of physical relationships between variables. These results suggest that for complex AI models where post-hoc explanation is intractable, studying how a model arrives at its final state may be as revealing as explaining what that final state does.</p>
+            </td></tr>
+            <tr><td style="width: 150px;">11:00–11:30</td><td><strong>Spotlight Session 2</strong></td></tr>
+            <tr><td style="width: 150px;">11:30–12:00</td><td><strong>Tutorial – <a href="https://www.maxdreyer.de/">Maximilian Dreyer</a></strong>
+              <p><strong>From Concepts to Control: Diagnosing and Steering Vision Foundation Models.</strong>  This tutorial shows how to turn concept-based explanations into diagnosis and control for vision(-language) models. We train a sparse autoencoder (SAE) on CLIP embeddings to discover interpretable components, browse them with a SemanticLens-style interface, and compute component-level attributions for single examples to see which concepts drive predictions. We then use these concepts to reveal biases (e.g., gender associations for “nurse”) and demonstrate two lightweight control strategies: suppressing specific components and projecting out concept directions from the probing vector. We briefly replicate the workflow for Qwen3‑VL, noting the differences for multimodal hidden states. Participants leave with a practical recipe, pitfalls to avoid, and guidance for evaluating whether interventions actually reduce bias without harming core task performance.</p>
+            </td></tr>
+            <tr><td style="width: 150px;">12:00–12:15</td><td><strong>Closing Remarks</strong></td></tr>
+            <tr><td style="width: 150px;">12:15–13:00</td><td><strong>Poster Session</strong></td></tr>
           </tbody>
         </table> 
       </section>

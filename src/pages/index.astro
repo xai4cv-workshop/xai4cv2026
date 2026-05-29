@@ -1,6 +1,7 @@
 ---
 import Speakers from '../components/Speakers_CVPR26.astro';
 import People from '../components/People_CVPR26.astro';
+import PaperLinks from '../components/PaperLinks.astro';
 
 const base = import.meta.env.BASE_URL;
 ---
@@ -90,10 +91,12 @@ const base = import.meta.env.BASE_URL;
             </td></tr>
             <tr><td style="width: 150px;">11:00–11:30</td><td><strong>Spotlight Session 2</strong>
               <p><strong>DINO-QPM: Adapting Visual Foundation Models for Globally Interpretable Image Classification.</strong> Robert Zimmermann, Thomas Norrenbrock, Bodo Rosenhahn.</p>
+              <p><strong>FaCT: Faithful Concept Traces for Explaining Neural Networks.</strong> Amin Parchami-Araghi, Sukrut Rao, Jonas Fischer, Bernt Schiele.</p>
               <p><strong>Interpretable 3D Neural Object Volumes for Robust Conceptual Reasoning.</strong> Nhi Pham, Artur Jesslen, Bernt Schiele, Adam Kortylewski, Jonas Fischer.</p>
+              
             </td></tr>
             <tr><td style="width: 150px;">11:30–12:00</td><td><strong>Tutorial – <a href="https://www.maxdreyer.de/">Maximilian Dreyer</a></strong>
-              <p><strong>From Concepts to Control: Diagnosing and Steering Vision Foundation Models.</strong>  This tutorial shows how to turn concept-based explanations into diagnosis and control for vision(-language) models. We train a sparse autoencoder (SAE) on CLIP embeddings to discover interpretable components, browse them with a SemanticLens-style interface, and compute component-level attributions for single examples to see which concepts drive predictions. We then use these concepts to reveal biases (e.g., gender associations for “nurse”) and demonstrate two lightweight control strategies: suppressing specific components and projecting out concept directions from the probing vector. We briefly replicate the workflow for Qwen3‑VL, noting the differences for multimodal hidden states. Participants leave with a practical recipe, pitfalls to avoid, and guidance for evaluating whether interventions actually reduce bias without harming core task performance.</p>
+              <p><strong>From Concepts to Control: Diagnosing and Steering Vision Foundation Models.</strong> This tutorial shows how to turn concept-based explanations into diagnosis and control for vision(-language) models. We train a sparse autoencoder (SAE) on CLIP embeddings to discover interpretable components, explore them via textual search, and compute component-level attributions for single examples to see which concepts drive predictions. We then use these concepts to reveal biases (e.g., gender associations for “nurse”) and demonstrate lightweight control strategies: suppressing or amplifying specific concepts to test and correct the model. We briefly replicate the workflow for Qwen3‑VL, noting the differences for multimodal hidden states. Participants leave with a practical recipe, pitfalls to avoid, and guidance for diagnosing and correcting when models rely on undesired concepts.</p>
             </td></tr>
             <tr><td style="width: 150px;">12:00–12:15</td><td><strong>Closing Remarks</strong></td></tr>
             <tr><td style="width: 150px;">12:15–13:00</td><td><strong>Poster Session</strong></td></tr>
@@ -122,12 +125,18 @@ const base = import.meta.env.BASE_URL;
           <li><strong>P09</strong> <strong>Activation-Based Concept Extraction for Explainability in Image Classification.</strong> Matteo Bianchi, Riccardo Campi, Antonio De Santis, Sara Merengo, Marco Brambilla.</li>
           <li><strong>P13</strong> <strong>Can Cross-Layer Transcoders Replace Vision Transformer Activations? An Interpretable Perspective on Vision.</strong> Gerasimos Chatzoudis, Konstantinos D. Polyzos, Zhuowei Li, Difei Gu, Gemma Elyse Moran, Hao Wang, Dimitris Metaxas.</li>
           <li><strong>P15</strong> <strong>Concepts in Motion: Temporal Bottlenecks for Interpretable Video Classification.</strong> Patrick Knab, Sascha Marton, Philipp Schubert, Drago Guggiana Nilo, Christian Bartelt.</li>
+          <li><strong>P16</strong> <strong>FaCT: Faithful Concept Traces for Explaining Neural Networks.</strong> Amin Parchami-Araghi, Sukrut Rao, Jonas Fischer, Bernt Schiele.</li>
           <li><strong>P20</strong> <strong>Interpretable 3D Neural Object Volumes for Robust Conceptual Reasoning.</strong> Nhi Pham, Artur Jesslen, Bernt Schiele, Adam Kortylewski, Jonas Fischer.</li>
         </ul>
 
         <h3>Proceedings Track</h3>
         <ul class="xai-list">
-          <li><strong>P01</strong> <strong>How does My Model Fail? Automatic Identification and Interpretation of Physical Plausibility Failure Modes with Matryoshka Transcoders.</strong> Yiming Tang, Abhijeet Sinha, Dianbo Liu.</li>
+          <li><strong>P01</strong> 
+          <PaperLinks 
+            pdf="https://drive.google.com/file/d/1_m..." 
+            poster="https://drive.google.com/file/d/1pt..." 
+          />    
+          <strong>How does My Model Fail? Automatic Identification and Interpretation of Physical Plausibility Failure Modes with Matryoshka Transcoders.</strong> Yiming Tang, Abhijeet Sinha, Dianbo Liu.</li>
           {/* <li><strong>P02</strong> <strong>CAMBench-QR: A Structure-Aware Benchmark for Post-Hoc Explanations with QR Understanding.</strong> Ritabrata Chakraborty, Avijit Dasgupta, Sandeep Chaurasia.</li> */}
           <li><strong>P02</strong> <strong>FAME: Feature Activation Map Explanation on Image Classification and Face Recognition.</strong> Xinyi Zhang, Manuel Günther.</li>
           <li><strong>P03</strong> <strong>From Attribution to Action: A Human-Centered Application of Activation Steering.</strong> Tobias Labarta, Maximilian Dreyer, Sebastian Lapuschkin, Katharina Weitz, Nhi Hoang, Jim Berend, Wojciech Samek.</li>
@@ -147,21 +156,21 @@ const base = import.meta.env.BASE_URL;
         <h3>Non-Proceedings Track</h3>
         <ul class="xai-list">
           <li><strong>P15</strong> <strong>Concepts in Motion: Temporal Bottlenecks for Interpretable Video Classification.</strong> Patrick Knab, Sascha Marton, Philipp Schubert, Drago Guggiana Nilo, Christian Bartelt.</li>
-          {/* <li><strong>P16</strong> <strong>FaCT: Faithful Concept Traces for Explaining Neural Networks.</strong> Amin Parchami-Araghi, Sukrut Rao, Jonas Fischer, Bernt Schiele.</li> */}
-          <li><strong>P16</strong> <strong>Hierarchical Concept Embedding & Pursuit for Interpretable Image Classification.</strong> Ho Huu Nghia Nguyen, Tianjiao Ding, Rene Vidal.</li>
+          <li><strong>P16</strong> <strong>FaCT: Faithful Concept Traces for Explaining Neural Networks.</strong> Amin Parchami-Araghi, Sukrut Rao, Jonas Fischer, Bernt Schiele.</li>
+          <li><strong>P17</strong> <strong>Hierarchical Concept Embedding & Pursuit for Interpretable Image Classification.</strong> Ho Huu Nghia Nguyen, Tianjiao Ding, Rene Vidal.</li>
           {/* <li><strong>P18</strong> <strong>Interpretable and Steerable Concept Bottleneck Sparse Autoencoders.</strong> Akshay Kulkarni, Tsui-Wei Weng, Vivek Narayanaswamy, Shusen Liu, Wesam Sakla, Kowshik Thopalli.</li> */}
           {/* <li><strong>P19</strong> <strong>Feature Alignment for Scalable B-cosification of Foundational ViTs.</strong> Raphael Maser, Siddhartha Gairola, Sukrut Rao, Bernt Schiele.</li> */}
-          <li><strong>P20</strong> <strong>Interpretable 3D Neural Object Volumes for Robust Conceptual Reasoning.</strong> Nhi Pham, Artur Jesslen, Bernt Schiele, Adam Kortylewski, Jonas Fischer.</li>
-          <li><strong>P17</strong> <strong>Object-Level Explanations for Image Geolocation Models: a GeoGuessr use-case.</strong> Emilie Durrieu, Christophe Hurter, Philippe Muller, Victor Boutin.</li>
-          <li><strong>P18</strong> <strong>HyperPG: Probabilistic Prototypes on Hyperspheres for Interpretable Deep Learning.</strong> Maximilian Li, Korbinian Rudolf, Paul Mattes, Nils Blank, Rudolf Lioutikov.</li>
-          {/* <li><strong>P23</strong> <strong>Concept Regions Matter: Benchmarking CLIP with a New Cluster-Importance Approach.</strong> Aishwarya Agarwal, Srikrishna Karanam, Vineet Gandhi.</li> */}
-          <li><strong>P19</strong> <strong>Evaluation Cards for XAI Metrics.</strong> Rokas Gipiškis, Olga Kurasova.</li>
-          <li><strong>P20</strong> <strong>Extended Abstract: CHiQPM: Calibrated Hierarchical Interpretable Image Classification.</strong> Thomas Norrenbrock, Timo Kaiser, Sovan Biswas, Neslihan Kose, Bodo Rosenhahn.</li>
-          <li><strong>P21</strong> <strong>Explaining CLIP Zero-shot Predictions Through Concepts.</strong> Onat Ozdemir, Anders Christensen, Stephan Alaniz, Zeynep Akata, Emre Akbas.</li>
-          <li><strong>P22</strong> <strong>What does CLIP see per token?.</strong> Wajahat Khan, Seungkyu Lee.</li>
-          <li><strong>P23</strong> <strong>How Many Visual Levers Drive Urban Perception? Interventional Counterfactuals via Multiple Localised Edits.</strong> Jason Tang.</li>
-          <li><strong>P24</strong> <strong>Explainable Visual Anomaly Detection via Concept Bottleneck Models.</strong> Arianna Stropeni, Valentina Zaccaria, Francesco Borsatti, Davide Dalle Pezze, Manuel Barusco, Gian Antonio Susto.</li>
-          <li><strong>P25</strong> <strong>Concept-Aware Pruning via Disentangled Subspaces for Robust Convolutional Networks.</strong> Kirin Danek, Vikram Ramaswamy.</li>
+          <li><strong>P18</strong> <strong>Interpretable 3D Neural Object Volumes for Robust Conceptual Reasoning.</strong> Nhi Pham, Artur Jesslen, Bernt Schiele, Adam Kortylewski, Jonas Fischer.</li>
+          <li><strong>P19</strong> <strong>Object-Level Explanations for Image Geolocation Models: a GeoGuessr use-case.</strong> Emilie Durrieu, Christophe Hurter, Philippe Muller, Victor Boutin.</li>
+          <li><strong>P20</strong> <strong>HyperPG: Probabilistic Prototypes on Hyperspheres for Interpretable Deep Learning.</strong> Maximilian Li, Korbinian Rudolf, Paul Mattes, Nils Blank, Rudolf Lioutikov.</li>
+          <li><strong>P21</strong> <strong>Concept Regions Matter: Benchmarking CLIP with a New Cluster-Importance Approach.</strong> Aishwarya Agarwal, Srikrishna Karanam, Vineet Gandhi.</li>
+          <li><strong>P22</strong> <strong>Evaluation Cards for XAI Metrics.</strong> Rokas Gipiškis, Olga Kurasova.</li>
+          <li><strong>P23</strong> <strong>Extended Abstract: CHiQPM: Calibrated Hierarchical Interpretable Image Classification.</strong> Thomas Norrenbrock, Timo Kaiser, Sovan Biswas, Neslihan Kose, Bodo Rosenhahn.</li>
+          <li><strong>P24</strong> <strong>Explaining CLIP Zero-shot Predictions Through Concepts.</strong> Onat Ozdemir, Anders Christensen, Stephan Alaniz, Zeynep Akata, Emre Akbas.</li>
+          <li><strong>P25</strong> <strong>What does CLIP see per token?.</strong> Wajahat Khan, Seungkyu Lee.</li>
+          <li><strong>P26</strong> <strong>How Many Visual Levers Drive Urban Perception? Interventional Counterfactuals via Multiple Localised Edits.</strong> Jason Tang.</li>
+          <li><strong>P27</strong> <strong>Explainable Visual Anomaly Detection via Concept Bottleneck Models.</strong> Arianna Stropeni, Valentina Zaccaria, Francesco Borsatti, Davide Dalle Pezze, Manuel Barusco, Gian Antonio Susto.</li>
+          <li><strong>P28</strong> <strong>Concept-Aware Pruning via Disentangled Subspaces for Robust Convolutional Networks.</strong> Kirin Danek, Vikram Ramaswamy.</li>
         </ul>
       </section>
 

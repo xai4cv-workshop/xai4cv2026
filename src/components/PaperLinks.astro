@@ -1,0 +1,48 @@
+---
+// src/components/PaperLinks.astro
+interface Props {
+  pdf?: string;
+  poster?: string;
+  video?: string;
+}
+
+const { pdf, poster, video } = Astro.props;
+---
+
+<span class="links-wrapper">
+  {pdf && (
+    <a href={pdf} target="_blank" rel="noopener" title="View PDF">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5v3zm4-3.5h-2.5V10H19v1.5h-1.5V13H16V7h3.5v1.5z"/></svg>
+    </a>
+  )}
+  
+  {video && (
+    <a href={video} target="_blank" rel="noopener" title="Watch Video">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+    </a>
+  )}
+
+  {poster && (
+    <a href={poster} target="_blank" rel="noopener" title="View Poster">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+    </a>
+  )}
+</span>
+
+<style>
+  .links-wrapper {
+    display: inline-flex;
+    gap: 8px;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+  svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: currentColor; /* Inherits color from the <a> tag */
+    transition: transform 0.1s ease;
+  }
+  a { color: #555; display: flex; align-items: center; }
+  a:hover { color: #000; }
+  a:hover svg { transform: scale(1.1); }
+</style>
